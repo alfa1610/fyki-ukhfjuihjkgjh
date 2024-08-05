@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEALS MOTOR INDONESIA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 20px;
+        }
+        .center {
+            text-align: center;
+        }
+        .catalog {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .catalog-item {
+            background-color: #F8F8FF;
+            border-radius: 20px;
+            overflow: hidden;
+            width: calc(30% - 20px);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.1s;
+            text-align: center;
+            position: relative;
+        }
+        .catalog-item img {
+            width: 100%;
+            height: auto;
+        }
+        .catalog-item h4 {
+            margin: 10px 0;
+            padding: 0 10px;
+            font-size: 0.9em;
+            color: #333;
+        }
+        .catalog-item:hover {
+            transform: translateY(-5px);
+        }
+        .catalog-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+        @media (max-width: 1024px) {
+            .catalog-item {
+                width: calc(45% - 20px);
+            }
+        }
+        @media (max-width: 768px) {
+            .catalog-item {
+                width: calc(100% - 20px);
+            }
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+			margin: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #666;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .sidebar {
+            float: left;
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .content {
+            float: left;
+            width: 75%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        marquee {
+            background-color: #ffcc00;
+            padding: 5px;
+            text-align: center;
+        }
+        .clear {
+            clear: both;
+        }
+		.menu-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            margin: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        .bar {
+            width: 100%;
+            height: 4px;
+            background-color: black;
+            transition: all 0.3s;
+        }
+        .nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200px;
+            background-color: #333;
+            border-radius: 0 8px 8px 0;
+            overflow: hidden;
+            z-index: 5;
+        }
+        .nav ul {
+            list-style-type: none;
+            padding: 60px 0 0 0;
+            margin: 0;
+        }
+        .nav ul li {
+            padding: 15px 20px;
+        }
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .nav ul li:hover {
+            background-color: #555;
+        }
+        .menu-icon.active .bar:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        .menu-icon.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-icon.active .bar:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+        .nav.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div class="nav" id="nav">
+        <ul>
+            <li><a ="#">Home</a></li>			
+			<li><a href="register.html" target="_blank">Registrasi</a></li>
+			<li><a href="invoice.html" target="_blank">Form Pembelian</a></li>
+			<li><a href="Kredit.html" target="_blank">Kalkulator Kredit</a></li>
+			<li><a href="contact.html" target="_blank">Hubungi Kami</a></li>
+			<li><a href="biodata.html" target="_blank">Tentang Kami</a></li>
+        </ul>
+    </div>
+	
+	<table border="0" cellpadding="15" cellspacing="0" width="80%" align="center"> 
+        <tr>
+            <td bgcolor="white" align="left" colspan="5" width="30%"><img src="../UAS Muhammad Fayez Aqilla Fahlevy/logo.png" width="40%" srcset=""></td>
+            <td bgcolor="white" width="20%"><font color="Black"> DEALS MOTOR INDONESIA</font></td>
+            <td bgcolor="white" width="10%" align="center"><a href="index.html"><img src="../UAS Muhammad Fayez Aqilla Fahlevy/home.jpg" width="100%"></a></td>
+            <td bgcolor="white" width="10%" align="center"><a href="register.html"><img src="../UAS Muhammad Fayez Aqilla Fahlevy/register.jpg" width="100%"></a></td>
+            <td bgcolor="white" width="10%" align="center"><a href="contact.html" target="_blank"><img src="../UAS Muhammad Fayez Aqilla Fahlevy/contact.jpg" width="100%"></a></td>
+        </tr>
+    </table>
+	<body>
+ 
+    <header>
+	</header>
+    <marquee behavior="scroll" direction="left"><font color="black">Selamat Datang di website resmi Deals Motors Indonesia - Kunjungi Showroom Terdekat Kami!</marquee>
+    
+   <br><br><br><br>
+   <br><br><br><br>
+   <head>
+	    <h1 align="center"> PILIHAN #1 </h1>
+		<h2 align="center"> Situs Jual - Beli Mobil Bekas Online Terpercaya </h2>
+		<p align="center"> Menerima Pembayaran Cash Hingga Kredit Syariah!! - Kepercayaan Konsumen No 1  </p>
+	</head>	
+	<br><br><br><br>
+	<br><br><br><br>
+	<br><br><br><br>
+	
+
+   <div class="sidebar">
+        <h3>Promo Bulan Agustus!!!!</h3>
+		<hr>
+		<br><br><br><br>
+		<h4>Deals Motors Indonesia adalah situs yang menyediakan berbagai pilihan mobil baru dan bekas. Anda bisa mencari harga, model, tahun, kilometer, dan Kondisi Terbaik</h4>
+		<br><br><br>
+		<p>"Deals Motors Indonesia Merupakan showroom mobil bekas yang memiliki kualitas tinggi, Telah dipercayakan oleh ratusan hingga ribuan konsumen untuk memilih mobilnya di Deals Motors Indonesia."</p>        
+		<br><br><br>
+		<p>Tersedia berbagai jenis atau macam mobil, dari commercial hingga luxury car, memiliki berbagai partner leasing standar hingga Syariah.</p>
+		<br><br><br>
+		<p>Deals Motors Indonesia berada dibawah naungan PT DMI yang sudah terdaftar dan resmi diakui oleh negara, Deals Motors Indonesia telah ada dari tahun 2008 hingga saat ini tentu saja telah terjamin."</p>
+		<br><br><br><br>
+   </div>
+
+    <div class="content">
+		<header>
+        <h2 class="center">Katalog Mobil</h2>
+        </header>
+		<br>
+		<div class="catalog">
+            <div class="catalog-item">
+                <a href="mobil1.html">
+                    <img src="../UAS Muhammad Fayez Aqilla Fahlevy/mobil1.jpg" alt="Mitsubishi Pajero Sport 2013">
+                    <h4>Mitsubishi Pajero Sport 2013 / DP 25jt</h4>
+					<h4>BELI DISINI</h4>
+                </a>
+            </div>
+            <div class="catalog-item">
+                <a href="mobil2.html">
+                    <img src="../UAS Muhammad Fayez Aqilla Fahlevy/mobil2.jpg" alt="Daihatsu Terios R 2017">
+                    <h4>Daihatsu Terios R 2017 / DP 15jt</h4>
+					<h4>BELI DISINI</h4>
+                </a>
+            </div>
+            <div class="catalog-item">
+                <a href="mobil3.html">
+                    <img src="../UAS Muhammad Fayez Aqilla Fahlevy/mobil3.jpg" alt="Daihatsu Xenia R 2017">
+                    <h4>Daihatsu Xenia R 2017 / DP 15jt</h4>
+					<h4>BELI DISINI</h4>
+                </a>
+            </div>
+            <div class="catalog-item">
+                <a href="mobil4.html">
+                    <img src="../UAS Muhammad Fayez Aqilla Fahlevy/mobil4.jpg" alt="Daihatsu Terios R 2019">
+                    <h4>Daihatsu Terios R 2019 / DP 20jt</h4>
+					<h4>BELI DISINI</h4>
+                </a>
+            </div>
+            <div class="catalog-item">
+                <a href="mobil5.html">
+                    <img src="../UAS Muhammad Fayez Aqilla Fahlevy/mobil5.jpg" alt="Toyota Altis 1.8 2008">
+                    <h4>Toyota Altis 1.8 2008 / DP 10jt</h4>
+					<h4>BELI DISINI</h4>
+                </a>
+            </div>
+            <div class="catalog-item">
+                <a href="mobil6.html">
+                    <img src="../UAS Muhammad Fayez Aqilla Fahlevy/mobil6.jpg" alt="Honda Mobilio E CVT 2016">
+                    <h4>Honda Mobilio E CVT 2016 / DP 15jt</h4>
+					<h4>BELI DISINI</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+	<br><br><br><br>
+	<br><br><br><br>
+    <footer>
+		<br><br>
+        <p>Deals Motor Indonesia</p>
+        <p>Jln.Rumah Sakit No 110, Ujungberung, Kota Bandung</p>
+        <p>&copy; 2024 Deals Motor Indonesia. All rights reserved.</p>
+		<br>
+    </footer>
+	
+	<script>
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

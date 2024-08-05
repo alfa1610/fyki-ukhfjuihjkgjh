@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kredit Mobil</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .result h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        #calculation-result p {
+            font-size: 1rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Kredit Mobil</h1>
+        <form id="loan-form">
+            <div class="form-group">
+                <label for="car-price">Harga Mobil:</label>
+                <input type="number" id="car-price" placeholder="Masukkan harga mobil" required>
+            </div>
+            <div class="form-group">
+                <label for="down-payment">Uang Muka:</label>
+                <input type="number" id="down-payment" placeholder="Masukkan uang muka" required>
+            </div>
+            <div class="form-group">
+                <label for="interest-rate">Suku Bunga (% per tahun):</label>
+                <input type="number" id="interest-rate" step="0.01" placeholder="Masukkan suku bunga" required>
+            </div>
+            <div class="form-group">
+                <label for="loan-term">Jangka Waktu (tahun):</label>
+                <input type="number" id="loan-term" placeholder="Masukkan jangka waktu" required>
+            </div>
+            <button type="button" onclick="calculateLoan()">Hitung Pembayaran</button>
+        </form>
+        <div class="result">
+            <h2>Hasil Perhitungan:</h2>
+            <div id="calculation-result">
+                <p>Jumlah Pinjaman: Rp <span id="loan-amount">0</span></p>
+                <p>Jumlah Pembayaran Bulanan: Rp <span id="monthly-payment">0</span></p>
+                <p>Total Pembayaran: Rp <span id="total-payment">0</span></p>
+                <p>Total Bunga: Rp <span id="total-interest">0</span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function calculateLoan() {
+            const carPrice = parseFloat(document.getElementById('car-price').value);
+            const downPayment = parseFloat(document.getElementById('down-payment').value);
+            const interestRate = parseFloat(document.getElementById('interest-rate').value) / 100 / 12;
+            const loanTerm = parseFloat(document.getElementById('loan-term').value) * 12;
+
+            const loanAmount = carPrice - downPayment;
+            const x = Math.pow(1 + interestRate, loanTerm);
+            const monthlyPayment = (loanAmount * interestRate * x) / (x - 1);
+            const totalPayment = monthlyPayment * loanTerm;
+            const totalInterest = totalPayment - loanAmount;
+
+            document.getElementById('loan-amount').innerText = loanAmount.toFixed(2);
+            document.getElementById('monthly-payment').innerText = monthlyPayment.toFixed(2);
+            document.getElementById('total-payment').innerText = totalPayment.toFixed(2);
+            document.getElementById('total-interest').innerText = totalInterest.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+
